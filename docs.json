@@ -67,9 +67,9 @@
           "icon": "slack"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Go to dashboard",
+          "href": "https://publish.careblocks.com",
+          "icon": "dashboard"
         }
       ]
     }
