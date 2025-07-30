@@ -1,15 +1,77 @@
 ---
-title: "Add a user"
+title: "Managing Users"
 openapi: "POST /plants"
 description: "Onboard a patient to your integration "
 ---
 
-Add a new user
+## Add a new user
 
 <RequestExample>
 
-```bash filename
-// add code here
+```json create user
+curl --location 'https://api.intentforms.co/v2/users' \
+--data-raw '{
+    "first_name": "Tenzin",
+    "last_name": "Aang",
+    "email": "raqeeb+io@xyz.com",
+    "phone": "09087654321",
+    "dob": "15/02/2021",
+    "gender": "male",
+    "address": {
+        "street_line_one": "Pink street",
+        "city": "Ikeja",
+        "state": "Lagos",
+        "country": "Nigeria"
+    }
+}'
 ```
 
 </RequestExample>
+
+<ResponseExample>
+
+```json user created
+{
+  "message": "User created",
+  "data": {
+    "id": "rfx5zgx9qti7pm6",
+    "first_name": "Tenzin",
+    "last_name": "Aang",
+    "email": "raqeeb+io@pneuma.care",
+    "phone": "09087654321",
+    "dob": "15/02/2021",
+    "gender": "male",
+    "address": {
+      "street_line_one": "Pink street",
+      "street_line_two": null,
+      "post_code": null,
+      "city": "Ikeja",
+      "state": "Lagos",
+      "country": "Nigeria"
+    },
+    "medical_record": {
+      "height": null,
+      "weight": null,
+      "blood_group": null,
+      "genotype": null,
+      "allergies": [],
+      "medications": [],
+      "vaccinations": [],
+      "family_medical_history": [],
+      "smoking_habit": null,
+      "drinking_habit": null,
+      "surgeries": [],
+      "transfusion_history": [],
+      "existing_medical_conditions": []
+    },
+    "verified": false,
+    "created_at": "2025-02-18T03:42:23.000Z",
+    "updated_at": "2025-02-17T20:42:23.000Z",
+    "metadata": {}
+  }
+}
+```
+
+</ResponseExample>
+
+## Update a user profile
