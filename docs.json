@@ -47,7 +47,8 @@
             "group": "Endpoint Examples",
             "pages": [
               "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
+              "api-reference/endpoint/users",
+              "api-reference/endpoint/agents",
               "api-reference/endpoint/delete"
             ]
           }
